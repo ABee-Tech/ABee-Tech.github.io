@@ -15,7 +15,7 @@ function logIn() {
   
   if (email == "email" && pass == "pass") {
     alert('You are successfully logged in!');
-    window.location.href='Home.htm';
+    window.location.href='home.htm';
   } else {
     $('#sthgWrong').show();
   }
