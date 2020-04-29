@@ -1,1 +1,77 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | My Apps</title>
+
+<!-- Styles -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fa5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">My Apps</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColl">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColl">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a href="home.htm" class="nav-link disabled">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="calculator.htm" class="nav-link disabled">Calculator</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="invoice.htm" class="nav-link disabled">Invoice</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="others.htm" class="nav-link disabled">Others</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="login-pane">
+<div class="container">
+    <div class="card text-center mt-5">
+        <div class="card-header">
+            <div class="welcome">
+        <h3 class="card-title">Welcome to My Apps</h3>
+        <p class="card-text">You will be able to access our apps after you are logged in.</p>
+        <p class="lead card-text"><strong>Please login!</strong></p>
+        </div>
+        </div>
+        <div class="card-body">
+            <form class="form-group"></form>
+            <input type="text" class="form-control" id="email" placeholder="Email Address">
+            <br>
+            <input type="password" class="form-control" id="pass" placeholder="Password" name="password">
+            <br>
+            <input type="submit" value="Log In" onclick=logIn() class=" form-control btn btn-secondary">
+            <br>
+            <p class="alert bg-danger mt-2" id = "sthgWrong" style="display: none;">Wrong Email Address or Password</p>
+
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+
+<!-- Scripts -->
+<script src="assets/js/jquery-3.4.1.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/fa5.13.0/js/all.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
