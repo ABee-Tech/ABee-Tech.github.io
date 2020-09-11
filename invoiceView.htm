@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice | My Apps</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fa5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.htm">My Apps</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColl">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColl">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="home.htm" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calculator.htm" class="nav-link">Calculator</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a href="invoice.htm" class="nav-link">Invoice</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="others.htm" class="nav-link">Others</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <button onclick=logOut() class="nav-link btn btn-outline-secondary"><span><i class="fas fa-user"></i></span> Logout</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Invoice Template -->
+        
+        <div class="container-fluid">
+            <div class="mt-4 text-center" id="printer">
+                <button class="btn btn-outline-secondary btn-md" onclick="printInvoice()"><i class="fas fa-print"></i><span> PRINT</span>
+                </button>
+            </div>
+            <div>
+                <div class="border mx-auto mt-4 p-4" style="width:70rem;height:100rem;">
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div style="float:right; ">
+                                <div style="font-size:50px;color:rgb(104, 104, 104);"><b>INVOICE</b></div><br>
+                                <div id="dateD">DATE : </div>
+                                <div id="invoiceNumberD">INVOICE# : </div>
+                                <div id="customerIdD">CUSTOMER ID : </div>
+                            </div>
+                            
+                            <div style="float:left;">
+                                <div style="font-size:50px">
+                                    <b>ABC Enterprises</b></div><br>
+                                    <div>
+                                        Basundhara, Kathmandu
+                                    </div>
+                                    
+                                    
+                                    <div>
+                                        Phone : 014411223
+                                    </div>
+
+                                    <div>
+                                        Email : payment@abcenterprises.com
+                                    </div>
+                                    
+                                    
+                                    <div>
+                                        Website : www.abcenterprises.com
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="border bg-dark">
+                        <br>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="w-50  bg-dark" style="color:white;">
+                                    <span class="ml-2"><b>BILL TO</b></span>
+                                </div>
+                                <div class="ml-2">
+                                    <div id="customerNameD">NAME : </div>
+                                    <div id="customerCompanyD">COMPANY : </div>
+                                    <div id="customerAddressD">ADDRESS : </div>
+                                    <div id="customerPhoneD">PHONE : </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <table class="table table-bordered">
+                                    <thead class="table-dark ">
+                                        <tr>
+                                            <td><b>SN</b></td>
+                                            <td><b>Particulars</b></td>
+                                            <td><b>Quantity</b></td>
+                                            <td><b>Rate</b></td>
+                                            <td><b>Amount</b></td>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><b>1</b></td>
+                                            <td><b>Paper A4</b></td>
+                                            <td><b>50</b></td>
+                                            <td><b>265</b></td>
+                                            <td><b>13250</b></td>
+                                            
+                                        </tr>
+                                    </tbody>
+                                    
+                                </table>
+                            </div>
+                            
+                            
+                        </div>
+                        <br><br>
+                        <div class="row">
+                            <div class="col">
+                                <table class="table-sm " style="float:right;" id="amountTable">
+                                    <tbody>
+                                        <tr>
+                                            
+                                            <td><b>Sub-total : </b></td>
+                                            <td>Rs.0</td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td><b>Discount : </b> </td>
+                                            <td>Rs.0</td>
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td><b>VAT (13%) : </b></td>
+                                            <td>Rs.0</td>
+                                        </tr>
+                                        
+                                        <tr style="border-top: 1px solid black;">
+                                            
+                                            <td><b>Total : </b></td>
+                                            <td>Rs.0</td>
+                                        </tr>
+                                    </tbody>
+                                    
+                                </table>
+                                
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <table class="table-sm table-bordered  m-1" style="float:left;height:3cm;width:100%;">
+                                    <thead>
+                                        <tr><td class="bg-dark p-2" style="color:white">
+                                            <b>AMOUNT IN WORDS</b>
+                                        </td>
+                                    </tr></thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="p-2"><span id="amountInWords">Zero </span> Rupees Only /-
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <!-- Scripts -->
+            <script src="assets/js/jquery-3.4.1.js"></script>
+            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="assets/js/popper.min.js"></script>
+            <script src="assets/fa5.13.0/js/all.min.js"></script>
+            <script src="assets/js/script.js"></script>
+            
+            <script>
+                $(document).ready(function(){
+                    
+                    var loginState = localStorage.getItem("myAppsLoginState");
+                    if (loginState == 0){
+                        window.location.href = 'index.html';
+                        alert('You are not logged in!');
+                        
+                    }
+                    
+                })
+                
+                function printInvoice() {
+                    $('#printer').hide();
+                    window.print();
+                    $('#printer').show();
+                    
+                    
+                }
+            </script>
+            
+            
+        </body>
+        </html>
