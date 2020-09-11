@@ -56,6 +56,21 @@
     display: none;
 }
 
+.direction {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-top: 20px;
+    margin-right: 190px;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.direction i {
+    font-size: 50px;
+}
+
 @media (max-width: 600px) {
     .login-pane .container {
         max-width: 450px;
