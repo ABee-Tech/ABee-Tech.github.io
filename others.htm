@@ -34,8 +34,20 @@
                     <a href="others.htm" class="nav-link">Others</a>
                 </li>
 
+                <li class="nav-item">
+                    <button onclick=logOut() class="nav-link btn btn-outline-secondary"><span><i class="fas fa-user"></i></span> Logout</a>
+                </li>
+
             </ul>
 
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card mt-4">
+        <div class="card-body text-center">
+            <h3 class="display-4">The Page is Under Construction.</h3>
         </div>
     </div>
 </div>
@@ -48,5 +60,20 @@
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/fa5.13.0/js/all.min.js"></script>
 <script src="assets/js/script.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+        var loginState = localStorage.getItem("myAppsLoginState");
+        if (loginState == 0){
+            window.location.href = 'index.html';
+            alert('You are not logged in!');
+
+        }
+
+    })
+</script>
+
+
 </body>
 </html>

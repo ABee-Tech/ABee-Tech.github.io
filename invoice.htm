@@ -4,49 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice | My Apps</title>
-
-<!-- Styles -->
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fa5.13.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="navbar navbar-expand-md navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="home.htm">My Apps</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColl">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColl">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a href="home.htm" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="calculator.htm" class="nav-link">Calculator</a>
-                </li>
-
-                <li class="nav-item active">
-                    <a href="invoice.htm" class="nav-link">Invoice</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="others.htm" class="nav-link">Others</a>
-                </li>
-
-            </ul>
-
+    <div class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.htm">My Apps</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColl">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColl">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="home.htm" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="calculator.htm" class="nav-link">Calculator</a>
+                    </li>
+                    
+                    <li class="nav-item active">
+                        <a href="invoice.htm" class="nav-link">Invoice</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="others.htm" class="nav-link">Others</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <button onclick=logOut() class="nav-link btn btn-outline-secondary"><span><i class="fas fa-user"></i></span> Logout</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="card mt-4">
+                        <div class="card-header">Company Details</div>
+                        <div class="card-body">
+                            <form class="form-group">
+                                <label for="companyName">Buyer's Name</label>
+                                <input type="text" class="form-control mb-3" placeholder="Enter Buyer's Name" id="companyName"> 
+                                
+                                <label for="buyerAddress">Buyer's Address</label>
+                                <input type="text" class="form-control mb-3" placeholder="Enter Buyer's Address" id="buyerAddress"> 
+                                
+                                <label for="invNo">Invoice Number</label>
+                                <input type="text" class="form-control mb-3" placeholder="Enter Invoice Number" id="invNo"> 
+                                
+                                <label for="clientID">Client ID/Customer ID</label>
+                                <input type="text" class="form-control mb-3" placeholder="Enter Customer ID" id="clientID"> 
+                                
+                                <label for="orderDate">Date of Order</label>
+                                <input type="date" class="form-control mb-3" placeholder="Enter Date of Order" id="orderDate"> 
+                                <div class="mt-4">
+                                    <button type="button" class="btn btn-success">Record Buyer Details</button>
+                                    <button type="button" class="btn btn-danger  float-right">Clear Details</button>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-12 col-md-6">
+                    <div class="card mt-4">
+                        <div class="card-header">Order Details</div>
+                        <div class="card-body">
+                            <form class="form-group">
+                                <label for="particulars">Particulars</label>
+                                <input type="text" class="form-control mb-3" placeholder="Enter Particulars" id="particulars"> 
+                                
+                                <label for="quantity">Quantity</label>
+                                <input type="text" class="form-control mb-3" placeholder="Enter Quantity" id="quantity"> 
+                                
+                                <label for="rate">Rate</label>
+                                <input type="text" class="form-control mb-3" placeholder="Enter Rate" id="rate"> 
+                                
+                                <label for="amt">Amount</label>
+                                <input type="text" class="form-control mb-3" placeholder="Enter Amount" id="amt"> 
+                                
+                                <label for="discount">Discount %</label>
+                                <input type="text" class="form-control mb-3" placeholder="Enter Discount" id="discount"> 
+                                <div class="mt-4">
+                                    <button type="button" class="btn btn-success">Add Order</button>
+                                    <button type="button" class="btn btn-danger  float-right">Clear Orders</button>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <div class="card mt-4">
+                        <div class="card-header">Details of Orders</div>
+                        <div class="card-body">
+                            <table class="table table-bordered table-stripped">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <td>S.N</td>
+                                        <td>Particulars</td>
+                                        <td>Quantity</td>
+                                        <td>Rate</td>
+                                        <td>Amount</td>
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <tr>
+                                        <td>S.N</td>
+                                        <td>Particulars</td>
+                                        <td>Quantity</td>
+                                        <td>Rate</td>
+                                        <td>Amount</td>
+                                    </tr>
 
-
-
-<!-- Scripts -->
-<script src="assets/js/jquery-3.4.1.js"></script>
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/fa5.13.0/js/all.min.js"></script>
-<script src="assets/js/script.js"></script>
-</body>
-</html>
+                                    <tr>
+                                        <td>S.N</td>
+                                        <td>Particulars</td>
+                                        <td>Quantity</td>
+                                        <td>Rate</td>
+                                        <td>Amount</td>
+                                    </tr>
+                                </tbody>
+                                
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        <!-- Scripts -->
+        <script src="assets/js/jquery-3.4.1.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/fa5.13.0/js/all.min.js"></script>
+        <script src="assets/js/script.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                
+                var loginState = localStorage.getItem("myAppsLoginState");
+                if (loginState == 0){
+                    window.location.href = 'index.html';
+                    alert('You are not logged in!');
+                    
+                }
+                
+            })
+        </script>
+        
+        
+    </body>
+    </html>
