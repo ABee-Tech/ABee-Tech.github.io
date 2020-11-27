@@ -27,7 +27,7 @@ $(document).ready(function () {
         },
     ];
 
-    $.each(interests, function (key, value) {
+    $.each(educations, function (key, value) {
         $(".education table").append(
             `<tr>
             <td>${value.qualification} </td>
