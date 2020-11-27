@@ -358,6 +358,9 @@ aside li .active {
     header {
         font-size: 22px;
     }
+    .title {
+        font-size: 18px;
+    }
     body {
         font-size: 12px;
     }
