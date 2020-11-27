@@ -17,4 +17,9 @@ $(document).ready(function () {
             `
         );
     });
+    document.title = "Related Trainings | Abhishek R. Pandey";
+
+    $(":root").css("--primary-color-dark", "#d63031");
+    $(":root").css("--primary-color-light", "#fd5453");
+    $(":root").css("--secondary-color", "#fab1a0");
 });

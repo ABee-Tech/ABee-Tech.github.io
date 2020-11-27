@@ -37,4 +37,10 @@ $(document).ready(function () {
         </tr>`
         );
     });
+
+    document.title = "Education | Abhishek R. Pandey";
+
+    $(":root").css("--primary-color-dark", "#c44569");
+    $(":root").css("--primary-color-light", "#f9658f");
+    $(":root").css("--secondary-color", "#ffc7d7");
 });

@@ -15,4 +15,10 @@ $(document).ready(function () {
     $.each(objectives, function (key, value) {
         $(".career_objective .info").append(`<p> ${value} </p>`);
     });
+
+    document.title = "Career Objective | Abhishek R. Pandey";
+
+    $(":root").css("--primary-color-dark", "#ce9d00");
+    $(":root").css("--primary-color-light", "#c7a53a");
+    $(":root").css("--secondary-color", "#f5f36b");
 });

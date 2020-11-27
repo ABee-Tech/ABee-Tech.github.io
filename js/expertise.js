@@ -28,4 +28,9 @@ $(document).ready(function () {
             `<li><i class="${value.fa}"></i><span> ${value.desc} </span></li>`
         );
     });
+    document.title = "Expertise | Abhishek R. Pandey";
+
+    $(":root").css("--primary-color-dark", "#574b90");
+    $(":root").css("--primary-color-light", "#786fa6");
+    $(":root").css("--secondary-color", "#82b8cb");
 });

@@ -20,4 +20,9 @@ $(document).ready(function () {
             `<li><span>${value}</span></li>`
         );
     });
+    document.title = "Technology Summary | Abhishek R. Pandey";
+
+    $(":root").css("--primary-color-dark", "#6c5ce7");
+    $(":root").css("--primary-color-light", "#0984e3");
+    $(":root").css("--secondary-color", "#74b9ff");
 });
