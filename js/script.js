@@ -27,7 +27,6 @@ $(document).ready(function () {
         event.preventDefault();
         $(".contents").load("related_trainings.html");
         document.title = "Related Trainings | Abhishek R. Pandey";
-        $.getScript("/js/related_trainings.js");
 
         $(":root").css("--primary-color-dark", "#d63031");
         $(":root").css("--primary-color-light", "#fd5453");
@@ -38,7 +37,6 @@ $(document).ready(function () {
         event.preventDefault();
         $(".contents").load("technology_summary.html");
         document.title = "Technology Summary | Abhishek R. Pandey";
-        $.getScript("/js/technology_summary.js");
 
         $(":root").css("--primary-color-dark", "#6c5ce7");
         $(":root").css("--primary-color-light", "#0984e3");
@@ -49,7 +47,6 @@ $(document).ready(function () {
         event.preventDefault();
         $(".contents").load("career_objective.html");
         document.title = "Career Objective | Abhishek R. Pandey";
-        $.getScript("/js/career_objective.js");
 
         $(":root").css("--primary-color-dark", "#ce9d00");
         $(":root").css("--primary-color-light", "#c7a53a");
@@ -60,7 +57,6 @@ $(document).ready(function () {
         event.preventDefault();
         $(".contents").load("expertise.html");
         document.title = "Expertise | Abhishek R. Pandey";
-        $.getScript("/js/expertise.js");
 
         $(":root").css("--primary-color-dark", "#574b90");
         $(":root").css("--primary-color-light", "#786fa6");
@@ -71,7 +67,6 @@ $(document).ready(function () {
         event.preventDefault();
         $(".contents").load("education.html");
         document.title = "Education | Abhishek R. Pandey";
-        $.getScript("/js/education.js");
 
         $(":root").css("--primary-color-dark", "#c44569");
         $(":root").css("--primary-color-light", "#f9658f");
