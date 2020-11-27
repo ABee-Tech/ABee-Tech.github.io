@@ -328,6 +328,7 @@ aside li .active {
         height: 20rem;
     }
     .speech {
+        font-size: 18px;
         bottom: 141px;
         right: 63px;
         max-width: 315px;
