@@ -15,7 +15,6 @@
 
 body {
     background-color: var(--secondary-color);
-
     font-family: "Barlow", sans-serif;
     color: var(--primary-color-dark);
     display: flex;
@@ -23,11 +22,11 @@ body {
     width: 100vw;
     height: 100vh;
     font-size: 18px;
-    transition: background-image 3s;
-    -webkit-transition: background-image 3s;
-    -moz-transition: background-image 3s;
-    -ms-transition: background-image 3s;
-    -o-transition: background-image 3s;
+    transition: background-color 500ms;
+    -webkit-transition: background-color 500ms;
+    -moz-transition: background-color 500ms;
+    -ms-transition: background-color 500ms;
+    -o-transition: background-color 500ms;
 }
 
 header {
@@ -74,7 +73,7 @@ aside ul {
 
 aside li a {
     text-decoration: none;
-    background-color: var(--secondary-color);
+    background: var(--secondary-color);
     padding: 15px;
     border-radius: 15px;
     color: var(--primary-color-light);
@@ -83,6 +82,16 @@ aside li a {
     text-align: center;
     margin: auto;
     min-width: 100px;
+    transition: background 500ms, color 500ms;
+    -webkit-transition: background 500ms, color 500ms;
+    -moz-transition: background 500ms, color 500ms;
+    -ms-transition: background 500ms, color 500ms;
+    -o-transition: background 500ms, color 500ms;
+}
+
+aside li a:hover {
+    background: var(--primary-color-light);
+    color: var(--secondary-color);
 }
 
 .contents {
