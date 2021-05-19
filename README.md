@@ -7,6 +7,7 @@ Don't forget to check it out!
 This is the responsive CV with beautiful design. I have completed all the requirements of the project.
 
 Requirements:
+* faster loading with PreloadJS
 * used CSS animations
 * used flex CSS property
 * jQuery DOM manipulation
