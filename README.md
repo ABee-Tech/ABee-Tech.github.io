@@ -13,4 +13,4 @@ Requirements:
 * jQuery DOM manipulation
 * Used For loop to load HTML elements in DOM
 * Integrated onClick DOM manipulation
-* No use any CSS library
+* No use of any CSS library
